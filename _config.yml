@@ -5,6 +5,10 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+#theme
+theme                    : "minimal-mistakes-jekyll"
+minimal_mistakes_skin    : "dark"
+
 # Site Settings
 locale                   : "en-US"
 title                    : "Personal website"
@@ -159,7 +163,7 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-minimal_mistakes_skin: "dark"
+
 
 
 # Markdown Processing
