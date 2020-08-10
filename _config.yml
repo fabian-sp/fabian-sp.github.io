@@ -159,6 +159,7 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+minimal_mistakes_skin: "dark"
 
 
 # Markdown Processing
