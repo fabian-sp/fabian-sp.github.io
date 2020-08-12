@@ -13,7 +13,7 @@ minimal_mistakes_skin    : "dark"
 locale                   : "en-US"
 title                    : "Personal website"
 title_separator          : "-"
-name                     : &name "Fabian S"
+name                     : &name "personal website"
 description              : &description "PhD student in Mathematical Optimization"
 url                      : https://fabian-sp.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -84,9 +84,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Fabian Schaipp"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "PhD student in Optimization for Machine Learning"
   location         : "Munich"
   employer         :
   pubmed           :
