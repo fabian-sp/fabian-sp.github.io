@@ -10,5 +10,5 @@ redirect_from:
 
 News
 ======
-* My Python package `GGLasso` contains implementations for solving the Group and Fused Graphical Lasso problems. Have a look at the package [here](https://github.com/fabian-sp/GGLasso).
+* My Python package `GGLasso` contains implementations for solving the Group and Fused Graphical Lasso problems. Have a look at the package on [Github](https://github.com/fabian-sp/GGLasso).
 
