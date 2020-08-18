@@ -11,8 +11,8 @@ redirect_from:
 
 
 Education
-======
-* B.S. in Mathematics, TU Munich, 2016
+=====
+* B.S. in Mathematics, TU Munich, 2017
 * M.S. in Mathematics, TU Munich, 2020
 * semester abroad, University of Copenhagen, 2019
 * since 2020: PhD student at TU Munich
