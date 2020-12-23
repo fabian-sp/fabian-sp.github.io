@@ -12,7 +12,9 @@ redirect_from:
 
 Education
 =====
-* B.S. in Mathematics, TU Munich, 2017
+* since 2020: PhD student at the chair of Mathematical Optimization, TU Munich
 * M.S. in Mathematics, TU Munich, 2020
 * semester abroad, University of Copenhagen, 2019
-* since 2020: PhD student at TU Munich
+* B.S. in Mathematics, TU Munich, 2017
+
+
