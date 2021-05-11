@@ -10,7 +10,7 @@ redirect_from:
 
 About me
 -------------
-A brief intro about me: I am a PhD student in optimization at TU Munich. My interests surround optimization generally, and more specifically stochastic optimization algorithms, machine learning and related topics in computation and statistics. If you like any of these topics, we probably find a topic to chat about easily.
+I am a PhD student in optimization at TU Munich. My interests surround optimization generally, and more specifically stochastic optimization algorithms, machine learning and related topics in computation and statistics. If you like any of these topics, we probably find a topic to chat about easily.
 
 News
 ----------
