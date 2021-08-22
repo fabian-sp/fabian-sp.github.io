@@ -13,12 +13,6 @@ redirect_from:
 Education
 ===============
 
-| When         | What                                                  | Where                    |
-| ------------ |:-----------------------------------------------------:| :-----------------------:|
-| 2020 - today | PhD student at the chair of Mathematical Optimization | TU Munich                |
-| 2017-2020    | M.Sc. in Mathematics                                  | TU Munich                |
-| 2019         | semester abroad                                       | University of Copenhagen |
-| 2015-2016    | study year abroad                                     | Universidad de Granada   | 
-| 2013-2017    | B.Sc. in Mathematics                                  | TU Munich                | 
+I obtained my Bachelor's and Master's degree in mathematics at the Technical university of Munich. My studies included a stay abroad in Granada, Spain and later in Copenhagen, Denmark. Since 2020, I am PhD student at the chair of Mathematical optimization at TU Munich.
 
 
