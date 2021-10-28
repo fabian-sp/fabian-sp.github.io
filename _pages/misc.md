@@ -2,10 +2,10 @@
 layout: archive
 permalink: /misc/
 title: "Misc"
-author_profile: true
+author_profile: false
 redirect_from: 
   - /ms
 ---
 
 
-test
+![alt text](../images/lpball.png "title")
