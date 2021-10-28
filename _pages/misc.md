@@ -1,1 +1,1 @@
-![alt text](lpball.png "title")
+![alt text](../images/lpball.png "title")
