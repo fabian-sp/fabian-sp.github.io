@@ -4,8 +4,8 @@ permalink: /misc/
 title: "Misc"
 author_profile: true
 redirect_from: 
-  - /msc/
+  - /ms
 ---
 
 
-![alt text](../images/lpball.png "title")
+test
