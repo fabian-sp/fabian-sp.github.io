@@ -19,7 +19,7 @@ main:
     url: /cv/
     
   - title: "Misc"
-    url: /_pages/misc.md
+    url: /misc/
     
   #- title: "Guide"
    # url: /markdown/
