@@ -13,12 +13,14 @@ redirect_from:
 Education
 ===============
 
-I obtained my Bachelor's and Master's degree in mathematics at the Technical university of Munich. My studies included a stay abroad in Granada, Spain and later in Copenhagen, Denmark. 
-My master's thesis had the title "Nonsmooth methods for Multiple Graphical Lasso problems". Since 2020, I am PhD student at the chair of Mathematical optimization at TU Munich.
 
-Professional experience
-==========================
+* 2020-today: PhD student at the chair of Mathematical optimization at TU Munich
+* 2019: Mathematics, semester abroad, University of Copenhagen
+* 2017-2020: Mathematics, Master of Science, Technical University of Munich
+* 2015/16: Mathematics, semester abroad, Universidad de Granada
+* 2013-2017: Mathematics, Bachelor of Science, Technical University of Munich
 
-During my undergraduate studies, I was a working student in the data science department at Celonis and, later on, in financial engineering at Scalable Capital.  
+Thesis titles:
 
-
+* Master thesis: *Nonsmooth methods for Multiple Graphical Lasso problems*
+* Bachelor thesis: *A primal-dual Newton Conjugate Gradient method for l1-optimization*
