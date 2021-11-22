@@ -15,10 +15,10 @@ Education
 
 
 * 2020-today: PhD student at the chair of Mathematical optimization at TU Munich
-* 2019: Mathematics, semester abroad, University of Copenhagen
-* 2017-2020: Mathematics, Master of Science, Technical University of Munich
-* 2015/16: Mathematics, semester abroad, Universidad de Granada
-* 2013-2017: Mathematics, Bachelor of Science, Technical University of Munich
+* 2019: semester abroad, University of Copenhagen
+* 2017-2020: M. Sc. Mathematics, Technical University of Munich
+* 2015/16: semester abroad, Universidad de Granada
+* 2013-2017: B. Sc. Mathematics, Technical University of Munich; minor physics
 
 Thesis titles:
 
