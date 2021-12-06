@@ -11,7 +11,7 @@ minimal_mistakes_skin    : "dark"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : "Fabian Schaipp"
 title_separator          : "-"
 name                     : &name "personal website"
 description              : &description "PhD student in Mathematical Optimization"
