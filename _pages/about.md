@@ -14,5 +14,4 @@ I am a PhD student in optimization at TU Munich. My interests surround optimizat
 
 News
 ----------
-* `GGLasso` got published at JOSS! [![DOI](https://joss.theoj.org/papers/10.21105/joss.03865/status.svg)](https://doi.org/10.21105/joss.03865)
-
+* My Python package `GGLasso` for General Graphical Lasso problems got published in [JOSS](https://joss.theoj.org/papers/10.21105/joss.03865).
