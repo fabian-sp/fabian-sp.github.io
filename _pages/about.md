@@ -14,5 +14,5 @@ I am a PhD student in optimization at TU Munich. My interests surround optimizat
 
 News
 ----------
-* My Python package `GGLasso` contains implementations for solving several forms of Graphical Lasso problems. Have a look at the package on [Github](https://github.com/fabian-sp/GGLasso) or see the [documentation](https://gglasso.readthedocs.io/en/latest/).
+* `GGLasso` got published at JOSS! [![DOI](https://joss.theoj.org/papers/10.21105/joss.03865/status.svg)](https://doi.org/10.21105/joss.03865)
 
