@@ -12,7 +12,7 @@ redirect_from:
 
 
 
-[Tools for creating open-source research software](/_posts/oss_tutorial.md)
+[Tools for creating open-source research software](/posts/oss_tutorial)
 ---------------------------------------
 
 <img align="left" width = "300px" border = "2px" src="../images/courbet_stormysea.jpg"> 
