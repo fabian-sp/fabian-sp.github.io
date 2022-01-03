@@ -15,7 +15,7 @@ redirect_from:
 [Tools for creating open-source research software](/_posts/oss_tutorial.md)
 ---------------------------------------
 
-<img align="left" width = "300px" src="../images/courbet_stormysea.jpg"> 
+<img align="left" width = "300px" border = "2px" src="../images/courbet_stormysea.jpg"> 
 Making your research code open-source, tested and documented is quite simple nowadays. This post gives an overview of the most important steps and collects useful ressources, e.g. tutorials for Readthedocs, Sphinx (Gallery) and unit testing in Python.
 
 <br/><br/>
