@@ -1,7 +1,7 @@
 ---
 title: 'A collection of resources for creating open-source software packages'
 date: 2022-01-03
-permalink: /posts/oss_tutorial
+permalink: /posts/
 tags:
   - open-source
   - software
