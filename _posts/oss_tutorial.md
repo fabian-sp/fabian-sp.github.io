@@ -1,1 +1,101 @@
+# A collection of resources for creating open-source software packages
 
+This article serves as a short checklist - mainly as a reminder to myself - for converting your research code into an open-source, distributable and well documented package. 
+Some, but not all, steps might only apply to Python projects. Most of the individual steps are very well documented, so you can see this as a collection of websites/tutorials that helped me for my own projects.
+
+### 0. Git(hub)
+
+Many of the following steps are much simplified if your code is already a Github repository. 
+
+### 1. License
+
+If you aim to make your package available to others, it should have a license. While there are many standard open-source licenses around, be aware that your choice can make a difference in how others can use or redistribute your package. You can add a license directly over the Github page of your repository ([link to docu](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)).
+
+A great introductory article on the legal background of open-source licenses is [here](https://opensource.guide/legal/).
+
+
+### 2. Packaging
+
+When your project grows, at some point you might need to use some of your functions across multiple other scripts. In order to import from your module, you only need one additional file, a `setup.py` file, and install the module locally as a package in your (virtual) environment. Fortunately, a setup file is basically all you need in order to make your package distributable - for example with `pip` or `conda`.
+
+A useful guide on how to create a setup file and make your package distributable with `pip` is [here](https://realpython.com/pypi-publish-python-package/#pip-install-your-package).
+Other great resources with many details are [this packaging guide](https://python-packaging.readthedocs.io/en/latest/index.html) and [this introduction from the Python packaging authority](https://packaging.python.org/en/latest/tutorials/packaging-projects/).
+
+
+### 3. Documentation
+
+If you ever had to become familiar with a code repository you did not write yourself, you will understand the importance of *a proper documentation*. Apart from the standard advice of using docstrings and comments where needed, you can also create and publish a documentation for your package as a whole. Typically, this could be included in the `README` of your repository. However, if your package becomes more complex and needs more explaining, you might consider creating a documentation on [Read the docs](https://readthedocs.org/). I will list the steps on how to achieve this (obviously other tools could be used, but I will describe the ones I used myself).
+
+* Create a documentation using Sphinx. This mainly involves writing `.md` or `.rst` files where you explain everything which is needed. Here is a [guide on how to get started](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html).
+One of the great features of Sphinx is, that it can parse the docstrings of your functions into nicely-looking and readable websites (as you might know it from the docs of `numpy`). Moreover, you can include math formulas, cross-references or links into the docstrings. Like this, if you change the source code you will only need to update the docstrings and the documentation will be up-to-date automatically. 
+
+* Build the documentation locally (see below how to do that).  
+
+If you created the documentation files within the subfolder `docs`, the commands for this are as simple as
+
+    cd docs/
+    make html
+
+* Create a Readthedocs account and add a `.readthedocs.yaml` on the top level of your repository. A minimal file example is [here](https://docs.readthedocs.io/en/stable/config-file/v2.html).
+* Build the documentation. Readthedocs can be setup in a way, that it builds automatically from a selected Github repository (whenever there is a commit to `main` or `master`). Readthedocs will install all dependencies from `requirements.txt` (whereas Pypi uses the ones from `setup.py`).
+
+[The Readthedocs documentation](https://docs.readthedocs.io/en/stable/intro/import-guide.html) provides you with all the details about importing and building your documentation.
+
+### 4. Enhancing your documentation
+
+If your package gets more involved, having some text with pictures and automatically generated class and function documentation might not satisfy you.
+Fortunately, there are numerous ways to bring your documentation to the next level:
+
+#### 4.1. Example gallery
+
+Explaining by example is often much more effective. Thus, show what your package can do by simply setting up small example scripts. `Sphinx Gallery` offers an easy way to include showcase examples in your documentation and beautifully embed plots, visualization and code snippets. 
+
+The main idea is very simple: in a subfolder of your repository (e.g. called `examples`) every Python script will be parsed. Every script with a filename starting with `plot_` will be executed and all plots are shown.
+
+As the gallery is an extension of Sphinx, it can be easily integrated into your configuration from step 3. All essential infos for getting started can be found in the [documentation](https://sphinx-gallery.github.io/stable/getting_started.html#create-simple-gallery). Advanced configuration options, e.g. ignoring some of the files in the `examples` direcory, are [here](https://sphinx-gallery.github.io/stable/configuration.html#configuration).
+
+#### 4.2. Including Jupyter Notebooks
+
+As an alternative to an example gallery, you can also use [Jupyter notebooks](https://jupyter.org/) to create tutorials on how to use your package, or showcase some of its features.
+
+Like on Github, where Jupyter notebooks are rendered directly in your browser when you open them, the [nbsphinx](https://nbsphinx.readthedocs.io) package allows you to do the same on your readthedocs page. Simply create your tutorial notebooks, save them to your `docs` subfolder, and add the notebooks to your documentation index as described [here](https://nbsphinx.readthedocs.io).
+
+From there, the possibilities are almost endless. You can even do things like [linking](https://nbsphinx.readthedocs.io/en/0.8.7/prolog-and-epilog.html) to an interactive version of the notebook on Google colab or similar.
+
+#### 4.3. Autodocs
+
+For projects with many submodules, it can be tedious to manually write a file that has links to all the documentation pages of different classes, functions, ...
+Fortunately, the [autodocs](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html) extension for Sphinx can automatically generate them for you.
+
+It can automatically generate documentation pages from the docstrings in an entire source file, class or function in your package.
+
+**Note:** As you might have guessed, getting all docstrings rendered properly can be a little tricky at times, so try this out locally first before including it in your readthedocs page.
+
+### 5. Unit tests
+
+Even if you do not aim to open-source your code, you should include (unit) tests. This means writing test functions which ensure that your code is *a)* running without errors and *b)* giving the correct result. 
+
+*Remark:* even though it is the last point in this checklist, writing tests should be at best done while developing the package.
+
+For example, if you wrote a function `my_sqrt` which should always return a non-negative result, you could add a test like this:
+
+    def test_my_sqrt():
+        a = my_sqrt(b)
+        assert a >= 0
+        return
+
+Often, you want to assert that two numbers or arrays are equal up to some numerical inaccuracy. For this, `numpy` provides [useful functionalities](https://numpy.org/doc/stable/reference/generated/numpy.testing.assert_almost_equal.html).
+
+Using `pytest`, all files with filename starting or ending with `test` will be scanned for functions which start with the prefix `test` (as in the example above).
+If you want to compute a coverage report (i.e. how many lines of code are included in one of the tests), use
+    
+    pytest --cov=my_package my_package/
+
+### Optional
+
+- Make it easy for others to cite your software. A citation snippet can be added [directly over Github](https://github.blog/2021-08-19-enhanced-support-citations-github/).
+
+- Automate testing and building using Github actions. For example, you can create automatic coverage reports with [Codecov](https://github.com/marketplace/actions/codecov).
+
+
+Thanks for reading!
