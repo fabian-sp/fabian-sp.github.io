@@ -10,7 +10,7 @@ author_profile: true
 
 
 
-[Tools for creating open-source research software](/posts/2022-03-01-oss)
+[Tools for creating open-source research software](/posts/2022/03/01/oss)
 ---------------------------------------
 
 <img align="left" width = "300px" border = "3px" src="../images/courbet_stormysea.jpg"> 
