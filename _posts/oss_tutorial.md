@@ -98,4 +98,4 @@ If you want to compute a coverage report (i.e. how many lines of code are includ
 - Automate testing and building using Github actions. For example, you can create automatic coverage reports with [Codecov](https://github.com/marketplace/actions/codecov).
 
 
-Thanks for reading!
+*Thank you for reading! Many thanks to Johannes Ostner for giving feedback and adding some ressources*.
