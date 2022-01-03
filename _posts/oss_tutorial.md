@@ -1,3 +1,12 @@
+---
+title: 'A collection of resources for creating open-source software packages'
+date: 2022-01-03
+permalink: /posts/oss_tutorial
+tags:
+  - open-source
+  - software
+---
+
 # A collection of resources for creating open-source software packages
 
 This article serves as a short checklist - mainly as a reminder to myself - for converting your research code into an open-source, distributable and well documented package. 
