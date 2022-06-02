@@ -14,5 +14,6 @@ I am a PhD student in optimization at TU Munich. My interests surround optimizat
 
 News
 ----------
-* New preprint: *A Semismooth Newton Stochastic Proximal Point Method with Variance Reduction* on [arxiv](https://arxiv.org/pdf/2204.00406.pdf).
-* My Python package `GGLasso` for General Graphical Lasso problems got published in [JOSS](https://joss.theoj.org/papers/10.21105/joss.03865).
+* Contributed talk at the *French German Portugues Conference on Optimization*, May 2022, Porto.
+* New preprint: *A Semismooth Newton Stochastic Proximal Point Method with Variance Reduction* on [arxiv](https://arxiv.org/pdf/2204.00406.pdf). [[Code](https://github.com/fabian-sp/snspp)]
+* Our Python package `GGLasso` for General Graphical Lasso problems got published in [JOSS](https://joss.theoj.org/papers/10.21105/joss.03865).
