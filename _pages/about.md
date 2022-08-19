@@ -14,6 +14,7 @@ I am a PhD student in optimization at Technical University of Munich. My interes
 
 News
 ----------
+* Contributed talk at *ICCOPT*, July 2022, Lehigh.
 * Contributed talk at the *French German Portuguese Conference on Optimization*, May 2022, Porto.
 * New preprint: *A Semismooth Newton Stochastic Proximal Point Method with Variance Reduction* on [arxiv](https://arxiv.org/pdf/2204.00406.pdf). [[Code](https://github.com/fabian-sp/snspp)]
 * Our Python package `GGLasso` for General Graphical Lasso problems got published in [JOSS](https://joss.theoj.org/papers/10.21105/joss.03865).
