@@ -14,7 +14,7 @@ I am a PhD student in optimization at Technical University of Munich. My interes
 
 News
 ----------
-* I am currently visiting at CCM, Flatiron Instute, New York City.
+* I am currently visiting at **CCM, Flatiron Institute**, New York City.
 * Contributed talk at *ICCOPT*, July 2022, Lehigh University.
 * Contributed talk at the *French German Portuguese Conference on Optimization*, May 2022, Porto.
 * New preprint: *A Semismooth Newton Stochastic Proximal Point Method with Variance Reduction* on [arxiv](https://arxiv.org/pdf/2204.00406.pdf). [[Code](https://github.com/fabian-sp/snspp)]
