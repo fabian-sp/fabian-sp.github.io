@@ -14,8 +14,8 @@ I am a PhD student in mathematical optimization at TUM (Technical University of 
 
 News
 ----------
-* I am currently visiting at *CCM, Flatiron Institute, New York City* working with Robert Gower.
-* Contributed talk at *ICCOPT*, July 2022, Lehigh University.
-* Contributed talk at the *French German Portuguese Conference on Optimization*, May 2022, Porto.
-* New preprint: *A Semismooth Newton Stochastic Proximal Point Method with Variance Reduction* on [arxiv](https://arxiv.org/pdf/2204.00406.pdf). [[Code](https://github.com/fabian-sp/snspp)]
-* Our Python package `GGLasso` for General Graphical Lasso problems got published in [JOSS](https://joss.theoj.org/papers/10.21105/joss.03865).
+* September - November 2023: Visiting researcher at *CCM, Flatiron Institute, New York City*.
+* July 2022: Contributed talk at *ICCOPT*, Lehigh University.
+* May 2022: Contributed talk at the *French German Portuguese Conference on Optimization*, Porto.
+* April 2022: New preprint *A Semismooth Newton Stochastic Proximal Point Method with Variance Reduction* on [arxiv](https://arxiv.org/pdf/2204.00406.pdf). [[Code](https://github.com/fabian-sp/snspp)]
+* December 2021: Our Python package `GGLasso` for General Graphical Lasso problems got published in [JOSS](https://joss.theoj.org/papers/10.21105/joss.03865).
