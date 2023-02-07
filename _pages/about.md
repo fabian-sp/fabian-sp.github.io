@@ -14,7 +14,7 @@ I am a PhD student in mathematical optimization at TUM (Technical University of 
 
 News
 ----------
-* Januray 2023: New preprint *A Stochastic Proximal Polyak Step Size* on [arxiv](https://arxiv.org/abs/2301.04935).
+* January 2023: New preprint *A Stochastic Proximal Polyak Step Size* on [arxiv](https://arxiv.org/abs/2301.04935).
 * September - November 2022: Visiting researcher at *CCM, Flatiron Institute, New York City*. Working with Robert M. Gower.
 * July 2022: Contributed talk at *ICCOPT*, Lehigh University.
 * May 2022: Contributed talk at the *French German Portuguese Conference on Optimization*, Porto.
