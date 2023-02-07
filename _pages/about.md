@@ -14,7 +14,7 @@ I am a PhD student in mathematical optimization at TUM (Technical University of 
 
 News
 ----------
-* September - November 2023: Visiting researcher at *CCM, Flatiron Institute, New York City*.
+* September - November 2022: Visiting researcher at *CCM, Flatiron Institute, New York City*. Working with Robert M. Gower.
 * July 2022: Contributed talk at *ICCOPT*, Lehigh University.
 * May 2022: Contributed talk at the *French German Portuguese Conference on Optimization*, Porto.
 * April 2022: New preprint *A Semismooth Newton Stochastic Proximal Point Method with Variance Reduction* on [arxiv](https://arxiv.org/pdf/2204.00406.pdf). [[Code](https://github.com/fabian-sp/snspp)]
