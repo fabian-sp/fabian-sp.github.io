@@ -17,7 +17,7 @@ Optimization related software
 
 * **GGLasso**: a Python package for computing general Graphical Lasso problems. [![PyPI version fury.io](https://badge.fury.io/py/gglasso.svg)](https://pypi.python.org/pypi/gglasso/) [![DOI](https://joss.theoj.org/papers/10.21105/joss.03865/status.svg)](https://doi.org/10.21105/joss.03865) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/GGLasso) [![Documentation Status](https://readthedocs.org/projects/gglasso/badge/?version=latest)](http://gglasso.readthedocs.io/?badge=latest)
 
-* **ProxSPS**: a Pytorch optimizer for Polyak step sizes with weight dcay. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/ProxSPS)
+* **ProxSPS**: a Pytorch optimizer for Polyak step sizes with weight decay. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/ProxSPS)
 
 * **SNSPP**: Stochastic Proximal Point method for regularized statistical learning problems. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/snspp)
 
