@@ -13,6 +13,8 @@ redirect_from:
 
 * **MoMo**: adaptive learning rates for momentum methods in Pytorch. [![PyPI version fury.io](https://badge.fury.io/py/momo-opt.svg)](https://pypi.python.org/pypi/momo-opt/) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/MoMo)
 
+* **step-back**: a package for running optimization experiments in Pytorch. Contains training results of MoMo, SGD-M, Adam for many standard benchmarks. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/step-back)
+
 * **ProxSPS**: a Pytorch optimizer for Polyak step sizes with weight decay. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/ProxSPS)
 
 * **GGLasso**: a Python package for computing general Graphical Lasso problems. [![PyPI version fury.io](https://badge.fury.io/py/gglasso.svg)](https://pypi.python.org/pypi/gglasso/) [![DOI](https://joss.theoj.org/papers/10.21105/joss.03865/status.svg)](https://doi.org/10.21105/joss.03865) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/GGLasso) [![Documentation Status](
