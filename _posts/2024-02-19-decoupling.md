@@ -63,13 +63,13 @@ $$
 Let us denote the <tt>Adam</tt> preconditioner by $D_t = \mathrm{diag}(\epsilon + \sqrt{\hat v_t})$. The way that <tt>AdamW</tt> was proposed originally in the paper by Loshchilov and Hutter [1] is
 
 $$
-w_{t+1} = (1-\lambda\eta_t)w_t - \alpha_t D_t^{-1}\hat m_t. \tag{\texttt{AdamW-LH}}
+w_{t+1} = (1-\lambda\eta_t)w_t - \alpha_t D_t^{-1}\hat m_t. \tag{AdamW-LH}
 $$
 
 In [Pytorch](https://pytorch.org/docs/stable/generated/torch.optim.AdamW.html), the method is implemented slightly differently:
 
 $$
-w_{t+1} = (1-\lambda\alpha_t)w_t - \alpha_t D_t^{-1}\hat m_t. \tag{\texttt{AdamW-PT}}
+w_{t+1} = (1-\lambda\alpha_t)w_t - \alpha_t D_t^{-1}\hat m_t. \tag{AdamW-PT}
 $$
 
 
