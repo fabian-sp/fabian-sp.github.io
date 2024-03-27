@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-* SGD with Clipping is Secretly Estimating the Median Gradient(https://arxiv.org/abs/2402.12828), Schaipp F, Garrigos G, Simsekli U, Gower R, preprint 2024.
+* [SGD with Clipping is Secretly Estimating the Median Gradient](https://arxiv.org/abs/2402.12828), Schaipp F, Garrigos G, Simsekli U, Gower R, preprint 2024.
 * [Robust gradient estimation in the presence of heavy-tailed noise](https://openreview.net/forum?id=C6PiH9Fkjd), Schaipp F, Simsekli U, Gower R, **NeurIPS Workshop Heavy Tails in Machine Learning 2023**.
 * [MoMo: Momentum Models for Adaptive Learning Rates](https://arxiv.org/abs/2305.07583), Schaipp F, Ohana R, Eickenberg M, Defazio A, Gower R, preprint 2023.
 * [A Stochastic Proximal Polyak Step Size](https://openreview.net/forum?id=jWr41htaB3), Schaipp F, Gower R, Ulbrich M, **TMLR 2023**.
