@@ -11,7 +11,7 @@ redirect_from:
 
 
 
-* **MoMo**: adaptive learning rates for momentum methods in Pytorch. [![PyPI version fury.io](https://badge.fury.io/py/momo-opt.svg)](https://pypi.python.org/pypi/momo-opt/) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/MoMo)
+* **MoMo**: adaptive learning rates for momentum methods. Pytorch package: [![PyPI version fury.io](https://badge.fury.io/py/momo-opt.svg)](https://pypi.python.org/pypi/momo-opt/) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/MoMo). Also available in [Optax](https://optax.readthedocs.io/en/latest/api/contrib.html#optax.contrib.momo).
 
 * **step-back**: a package for running optimization experiments in Pytorch. Contains training results of MoMo, SGD-M, Adam for many standard benchmarks. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/step-back)
 
