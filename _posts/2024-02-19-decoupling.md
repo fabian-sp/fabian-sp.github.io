@@ -171,6 +171,18 @@ In fact, Figure 3 also shows that tuning strategy (S2) for <tt>AdamW-PT</tt> is 
 * This blog post only covers a ridge regression problem, and one might argue that the results could be different for other tasks. However, the exercise certainly shows there is no decoupling for <tt>AdamW-PT</tt> for one of the simplest possible problems, ridge regression. I also observed good performance of the (S2) strategy for <tt>AdamW-PT</tt> when training a vision transfomer on Imagenet (with the `timm` [library](https://github.com/huggingface/pytorch-image-models)).
 
 
+If you want to cite this post, please use
+
+```
+@misc{adamw-decoupling-blog,
+      title = {How to jointly tune learning rate and weight decay for {A}dam{W}},
+      author = {Schaipp, Fabian},
+      howpublished = {\url{https://fabian-sp.github.io/posts/2024/02/decoupling/}},
+      year = {2024}
+    }
+```
+
+
 <img src="/images/own/hodler2.jpg" width="800"/>
 
 
