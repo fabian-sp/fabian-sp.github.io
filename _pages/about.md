@@ -9,9 +9,9 @@ redirect_from:
 
 About me
 -------------
-I am a PhD student in mathematical optimization at TUM (Technical University of Munich), supervised by Professor Michael Ulbrich. My interests surround optimization in general, and more specifically stochastic optimization algorithms for machine learning and related topics in computation and statistics. My email is firsstname.lastname@tum.de.
+I am a researcher working on optimization for machine learning. Currently, I am a postdoc at Inria Paris, in the team of Francis Bach. I obtained my PhD at TUM (Technical University of Munich), supervised by Professor Michael Ulbrich. You can contact me at firsstname.lastname@tum.de.
 
-My recent work focuses on adaptive learning rates for algorithms such as SGD or Adam, and how they can reduce learning rate tuning. In this line of work, we developped (i) a way to include regularization functions in stochastic Polyak stepsizes (**ProxSPS**, [link to paper](https://openreview.net/forum?id=jWr41htaB3)), and (ii) how to combine adaptive learning rates with any preconditioned momentum method such as SGD-M an Adam (**MoMo**, [link to paper](https://arxiv.org/abs/2305.07583)). 
+My research interests are mainly stochastic optimization algorithms for machine learning, and related topics in computation and statistics. My recent work focuses on how to reduce the tuning effort for algorithms like SGD or Adam with adaptive learning rates. In this line of work, we developped (i) a way to include regularization functions in stochastic Polyak stepsizes (**ProxSPS**, [link to paper](https://openreview.net/forum?id=jWr41htaB3)), and (ii) how to combine adaptive learning rates with any preconditioned momentum method such as SGD-M an Adam (**MoMo**, [link to paper](https://arxiv.org/abs/2305.07583)).
 
 News
 ----------
