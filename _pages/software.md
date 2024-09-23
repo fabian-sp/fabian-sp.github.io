@@ -15,14 +15,10 @@ redirect_from:
 
 * **step-back**: a package for running optimization experiments in Pytorch. Contains training results of MoMo, SGD-M, Adam for many standard benchmarks. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/step-back)
 
-* **ProxSPS**: a Pytorch optimizer for Polyak step sizes with weight decay. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/ProxSPS)
+* **ncOPT**: GPU-compatible constrained optimization in Pytorch. [![PyPI version fury.io](https://badge.fury.io/py/ncopt.svg)](https://pypi.python.org/pypi/ncopt/) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/ncOPT)
 
 * **GGLasso**: a Python package for computing general Graphical Lasso problems. [![PyPI version fury.io](https://badge.fury.io/py/gglasso.svg)](https://pypi.python.org/pypi/gglasso/) [![DOI](https://joss.theoj.org/papers/10.21105/joss.03865/status.svg)](https://doi.org/10.21105/joss.03865) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/GGLasso) [![Documentation Status](
 https://readthedocs.org/projects/gglasso/badge/?version=latest)](http://gglasso.readthedocs.io/?badge=latest)
-
-* **ncOPT**: Prototype Python implementation of SQP-GS for nonsmooth, nonconvex constrained optimization. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/ncOPT)
-
-
 
 
 *********************************
