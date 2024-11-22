@@ -16,6 +16,7 @@ My research interests are mainly stochastic optimization algorithms for machine 
 News
 ----------
 
+* December 2024: I will be at NeurIPS@Paris at Sorbonne.
 * July 2024: I successfully defended my PhD thesis!
 * August - October 2023: Visiting researcher at CCM, Flatiron Institute, New York City.
 * June 2023: Participated in the [ProbAI summer schol](https://probabilistic.ai/) in Trondheim, Norway.
