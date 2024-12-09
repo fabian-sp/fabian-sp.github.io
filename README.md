@@ -10,6 +10,5 @@ Follow the instructions on https://github.com/academicpages/academicpages.github
 
 ## Changelog
 
+* 2024-12-09: Patched to the upstream master.
 * 2024-02-13: Jekyll introduced a bug, which can be fixed by removing the exerpt from three pages. See for more details: https://github.com/jekyll/jekyll/issues/9544.
-
-
