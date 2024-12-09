@@ -20,18 +20,18 @@ $$ \nonumber
 \min_{w\in \mathbb{R}^d} \ell(w),
 $$
 
-where $\ell: \mathbb{R}^d\to \mathbb{R}$ is a loss function, and $w$ are learnable parameters. Assume that the loss is given as $\ell(w) = \mathbb{E}_{x\sim \mathcal{P}} [\ell(w,x)]$, where $x$ is a batch of data, sampled from the training data distribution $\mathcal{P}$.
+where \\(\ell: \mathbb{R}^d\to \mathbb{R}\\) is a loss function, and \\(w\\) are learnable parameters. Assume that the loss is given as \\(\ell(w) = \mathbb{E}_{x\sim \mathcal{P}} [\ell(w,x)]\\), where \\(x\\) is a batch of data, sampled from the training data distribution \\(\mathcal{P}\\).
 
 Suppose we want to solve this problem with stochastic gradient methods. Let us introduce some notation: we denote
 
-* the *initial learning rate* by $\alpha > 0$, 
-* the multiplicative *learning rate scheduler* by $\eta_t > 0$ with $\eta_0=1$,
-* the weight decay parameter by $\lambda \geq 0$.
+* the *initial learning rate* by \\(\alpha > 0\\), 
+* the multiplicative *learning rate scheduler* by \\(\eta_t > 0\\) with \\(\eta_0=1\\),
+* the weight decay parameter by \\(\lambda \geq 0\\).
 
-The learning rate in iteration $t$ will be given by $\alpha_t := \alpha \eta_t$. 
-We will often refer to $\alpha$ as learning rate parameter, which is slightly inprecise, but for most of the contents the schedule $\eta_t$ will be constant anyway.
+The learning rate in iteration \\(t\\) will be given by \\(\alpha_t := \alpha \eta_t\\). 
+We will often refer to \\(\alpha\\) as learning rate parameter, which is slightly inprecise, but for most of the contents the schedule \\(\eta_t\\) will be constant anyway.
 
-The arguably most widely used method for training large-scale machine learning models is <tt>AdamW</tt>. It has been proposed by Loshchilov and Hutter and its main feature is that it handles weight decay separate from the loss $\ell$ (as opposed to the original <tt>Adam</tt> [3]). For readers not familiar with  <tt>AdamW</tt>, we refer to [1] and briefly explain the <tt>AdamW</tt> update formula below.
+The arguably most widely used method for training large-scale machine learning models is <tt>AdamW</tt>. It has been proposed by Loshchilov and Hutter and its main feature is that it handles weight decay separate from the loss \\(\ell\\) (as opposed to the original <tt>Adam</tt> [3]). For readers not familiar with  <tt>AdamW</tt>, we refer to [1] and briefly explain the <tt>AdamW</tt> update formula below.
 
 
 A short outline of this post: 
@@ -46,7 +46,7 @@ A short outline of this post:
 
 ## On the subtleties of implementing <tt>AdamW</tt>
 
-The quantities involed in <tt>AdamW</tt> are mostly the same as in the original version of <tt>Adam</tt>: let $g_t=\nabla \ell(w_t,x_t)$ be the stochastic gradient in iteration $t$, then for $\beta_1,\beta_2\in[0,1)$ we compute
+The quantities involed in <tt>AdamW</tt> are mostly the same as in the original version of <tt>Adam</tt>: let \\(g_t=\nabla \ell(w_t,x_t)\\) be the stochastic gradient in iteration \\(t\\), then for \\(\beta_1,\beta_2\in[0,1)\\) we compute
 
 $$
 m_t = \beta_1 m_{t-1} + (1-\beta_1) g_t, \nonumber \\
@@ -60,7 +60,7 @@ $$
 \hat v_t = v_{t}/(1-\beta_2^{t}) . \nonumber \\
 $$
 
-Let us denote the <tt>Adam</tt> preconditioner by $D_t = \mathrm{diag}(\epsilon + \sqrt{\hat v_t})$. The way that <tt>AdamW</tt> was proposed originally in the paper by Loshchilov and Hutter [1] is
+Let us denote the <tt>Adam</tt> preconditioner by \\(D_t = \mathrm{diag}(\epsilon + \sqrt{\hat v_t})\\). The way that <tt>AdamW</tt> was proposed originally in the paper by Loshchilov and Hutter [1] is
 
 $$
 w_{t+1} = (1-\lambda\eta_t)w_t - \alpha_t D_t^{-1}\hat m_t. \tag{AdamW-LH}
@@ -73,23 +73,23 @@ w_{t+1} = (1-\lambda\alpha_t)w_t - \alpha_t D_t^{-1}\hat m_t. \tag{AdamW-PT}
 $$
 
 
-Note that the only difference consists in the coefficient $1-\lambda\alpha_t= 1-\lambda\alpha\eta_t$ instead of $1-\lambda\eta_t$. While this seems like trivia at first sight (one could easily reparametrize $\lambda$ by $\lambda \alpha$), we will show that it has an important practical implication on tuning.
+Note that the only difference consists in the coefficient \\(1-\lambda\alpha_t= 1-\lambda\alpha\eta_t\\) instead of \\(1-\lambda\eta_t\\). While this seems like trivia at first sight (one could easily reparametrize \\(\lambda\\) by \\(\lambda \alpha)\\), we will show that it has an important practical implication on tuning.
 
 *Remark:* The implementation of <tt>AdamW</tt> is the same in [Optax](https://github.com/google-deepmind/optax/blob/2cdb89cc4935d8dc5c8a06344e7d50dc7a7419b0/optax/_src/alias.py#L548) as in Pytorch. Hence, what follows applies similarly to tuning <tt>AdamW</tt> in Optax.
 
 ## The meaning of decoupling
 
-So what do we mean when we say that learning rate $\alpha$ and weight decay $\lambda$ are decoupled?
-We will work with the following (approximate) definition: we say that $\alpha$ and $\lambda$ are decoupled, if the optimal choice for $\lambda$ does not depend on the choice of $\alpha$. Here, we mean *optimal with respect to some metric of interest* - for the rest of the blog post, this metric will be the loss $\ell$ computed over a validation dataset.
+So what do we mean when we say that learning rate \\(\alpha\\) and weight decay \\(\lambda\\) are decoupled?
+We will work with the following (approximate) definition: we say that \\(\alpha\\) and \\(\lambda\\) are decoupled, if the optimal choice for \\(\lambda\\) does not depend on the choice of \\(\alpha\\). Here, we mean *optimal with respect to some metric of interest* - for the rest of the blog post, this metric will be the loss \\(\ell\\) computed over a validation dataset.
 
-The graphic below illustrates this phenomenon: imagine, we draw a heatmap of the validation loss over a $(\alpha,\lambda)$ grid. Bright values indicate a better model performance. Then, in a coupled scenario (**left**) the bright valley could have a diagonal shape, while for the decoupled scenario (**right**) the valley is more rectangular.
+The graphic below illustrates this phenomenon: imagine, we draw a heatmap of the validation loss over a \\((\alpha,\lambda)\\) grid. Bright values indicate a better model performance. Then, in a coupled scenario (**left**) the bright valley could have a diagonal shape, while for the decoupled scenario (**right**) the valley is more rectangular.
 
 ![](/images/decoupling/heatmap.png)
 *Fig. 1: Model performance (bright = good) as a function of learning rate and weight decay parameters. Illustration taken from [2].*
 
-Note that in practice this can make a huge difference: in general, we need to tune over the 2D-space of $(\alpha,\lambda)$, assuming that all other hyperparameters are already set. The naive way to do this is a grid search.
-However, *if* we know that $\alpha$ and $\lambda$ are decoupled, then it would be sufficient to do two separate line searches for $\alpha$ and $\lambda$, followed by combining the best values from each line search.
-For example, if for each parameter we have $N$ candidate values, this reduces the tuning effort from $N^2$ (naive grid search) to $2N$ (two line searches).
+Note that in practice this can make a huge difference: in general, we need to tune over the 2D-space of \\((\alpha,\lambda)\\), assuming that all other hyperparameters are already set. The naive way to do this is a grid search.
+However, *if* we know that \\(\alpha\\) and \\(\lambda\\) are decoupled, then it would be sufficient to do two separate line searches for \\(\alpha\\) and \\(\lambda\\), followed by combining the best values from each line search.
+For example, if for each parameter we have \\(N\\) candidate values, this reduces the tuning effort from \\(N^2\\) (naive grid search) to \\(2N\\) (two line searches).
 
 This motivates why the decoupling property is important for practical use.
 
@@ -100,7 +100,7 @@ One of the main contributions of the <tt>AdamW</tt> paper [1] was that it showed
 > The main contribution of this paper is to improve regularization in Adam by decoupling the weight decay from the gradient-based update.
 
 
-The authors also claim that their method decouples the **weight decay parameter** $\lambda$ and the **learning rate** $\alpha$
+The authors also claim that their method decouples the **weight decay parameter** \\(\lambda\\) and the **learning rate** \\(\alpha\\)
 (which goes beyond decoupling weight decay and loss).
 
 > We provide empirical evidence that our proposed modification decouples the optimal choice of weight decay factor from the setting of the learning rate for [...] Adam.
@@ -109,33 +109,33 @@ While this claim is supported by experiments in the paper, we will show next an 
 
 ### A simple experiment
 
-The experiment is as follows: we solve a ridge regression problem for some synthetic data $A \in \mathbb{R}^{n \times d},~b\in \mathbb{R}^{n}$ with $n=200,~d=1000$. Hence $\ell$ is the squared loss, given by $\ell(w) = \Vert Aw-b \Vert^2$.
+The experiment is as follows: we solve a ridge regression problem for some synthetic data \\(A \in \mathbb{R}^{n \times d},~b\in \mathbb{R}^{n}\\) with \\(n=200,~d=1000\\). Hence \\(\ell\\) is the squared loss, given by \\(\ell(w) = \Vert Aw-b \Vert^2\\).
 
-We run both <tt>AdamW-LH</tt> and <tt>AdamW-PT</tt>, for a grid of learning-rate values $\alpha$ and weight-decay values $\lambda$. For now, we set the scheduler to be constant, that is $\eta_t=1$. We run everything for 50 epochs, with batch size 20, and average all results over five seeds.
+We run both <tt>AdamW-LH</tt> and <tt>AdamW-PT</tt>, for a grid of learning-rate values \\(\alpha\\) and weight-decay values \\(\lambda\\). For now, we set the scheduler to be constant, that is $\eta_t=1$. We run everything for 50 epochs, with batch size 20, and average all results over five seeds.
 
-Below is the final validation-set loss, plotted as heatmap over $\alpha$ and $\lambda$. Again, brighter values indicate lower loss values.
+Below is the final validation-set loss, plotted as heatmap over \\(\alpha\\) and \\(\lambda\\). Again, brighter values indicate lower loss values.
 
 ![](/images/decoupling/decoupling_heatmap_ridge_I.png)
-*Fig. 2: Final validation loss (bright = low) as a function of learning rate $\alpha$ and weight decay parameter $\lambda$.*
+*Fig. 2: Final validation loss (bright = low) as a function of learning rate \\(\alpha\\) and weight decay parameter \\(\lambda\\).*
 
 This matches the previous illustrative picture in Figure 1 pretty well (it's not a perfect rectangle for <tt>AdamW-LH</tt>, but I guess it proves the point)!
 
-**Conclusion 1:** Using the Pytorch implementation <tt>AdamW-PT</tt>, the parameters choices for $\alpha$ and $\lambda$ are **not decoupled in general**. However, the originally proposed method <tt>AdamW-LH</tt> indeed shows decoupling for the above example.
+**Conclusion 1:** Using the Pytorch implementation <tt>AdamW-PT</tt>, the parameters choices for \\(\alpha\\) and \\(\lambda\\) are **not decoupled in general**. However, the originally proposed method <tt>AdamW-LH</tt> indeed shows decoupling for the above example.
 
 Based on this insight, the obvious question is: what is the best (joint) tuning strategy when using the Pytorch version <tt>AdamW-PT</tt>? We answer this next.
 
 ## The right tuning strategy
 
-Assume that we have already found a good candidate value $\bar \lambda$ for the weight-decay parameter; for example, we obtained $\bar \lambda$ by tuning for a fixed (initial) learning rate $\bar \alpha$. Now we also want to tune the (initial) learning-rate value $\alpha$. 
+Assume that we have already found a good candidate value \\(\bar \lambda\\) for the weight-decay parameter; for example, we obtained \\(\bar \lambda\\) by tuning for a fixed (initial) learning rate \\(\bar \alpha\\). Now we also want to tune the (initial) learning-rate value \\(\alpha\\). 
 
 Assume that our tuning budget only allows for one line search/sweep. We will present two options for tuning: 
 
-(S1) Keep $\lambda = \bar \lambda$ fixed, and simply sweep over a range of values for $\alpha$.
+(S1) Keep \\(\lambda = \bar \lambda\\) fixed, and simply sweep over a range of values for \\(\alpha\\).
 
-If $\alpha$ and $\lambda$ are decoupled, then (S1) should work fine.
-However, as we saw before, the Pytorch version of <tt>AdamW</tt>, called <tt>AdamW-PT</tt>, seems not to be decoupled. Instead, the decay coefficient in each iteration is given by  $1 - \alpha \lambda \eta_t$. Thus, it seems intuitive to keep the quantity $\alpha \lambda$ fixed, which is implemented by the following strategy:
+If \\(\alpha\\) and \\(\lambda\\) are decoupled, then (S1) should work fine.
+However, as we saw before, the Pytorch version of <tt>AdamW</tt>, called <tt>AdamW-PT</tt>, seems not to be decoupled. Instead, the decay coefficient in each iteration is given by  \\(1 - \alpha \lambda \eta_t\\). Thus, it seems intuitive to keep the quantity \\(\alpha \lambda\\) fixed, which is implemented by the following strategy:
 
-(S2) When sweeping over $\alpha$, adapt $\lambda$ accordingly such that the product $\alpha \lambda$ stays fixed. For example, if $\alpha = 2\bar \alpha$, then set $\lambda=\frac12 \bar \lambda$. 
+(S2) When sweeping over \\(\alpha\\), adapt \\(\lambda\\) accordingly such that the product \\(\alpha \lambda\\) stays fixed. For example, if \\(\alpha = 2\bar \alpha\\), then set \\(\lambda=\frac12 \bar \lambda\\). 
 
 
 Strategy (S1) is slightly easier to code; my conjecture is that (S1) is also employed more often than (S2) in practice.
@@ -147,7 +147,7 @@ We plot again the heatmaps as before, but now highlighting the points that we wo
 * **middle**: (S2) for <tt>AdamW-PT</tt>,
 * **right**: (S1) for <tt>AdamW-LH</tt> (as we had seen that <tt>AdamW-LH</tt> is indeed decoupled).
 
-Here, we set $(\bar \lambda, \bar \alpha) =$ `(1e-2,3.2e-1)` for <tt>AdamW-PT</tt>, and $(\bar \lambda, \bar \alpha) =$ `(1e-2,3.2e-3)` for <tt>AdamW-LH</tt>.
+Here, we set \\((\bar \lambda, \bar \alpha) =\\) `(1e-2,3.2e-1)` for <tt>AdamW-PT</tt>, and \\((\bar \lambda, \bar \alpha) =\\) `(1e-2,3.2e-3)` for <tt>AdamW-LH</tt>.
 In the below plots, the circle-shaped markers highlight the sweep that corresponds to the tuning strategy (S1) or (S2). The bottom plot shows the validation loss as a curve over the highlighted markers.
 
 ![](/images/decoupling/decoupling_heatmap_ridge_II.png)
@@ -166,7 +166,7 @@ In fact, Figure 3 also shows that tuning strategy (S2) for <tt>AdamW-PT</tt> is 
 
 * Implementation details can have an effect on hyperparameter tuning strategies. We showed this phenomenon for <tt>AdamW</tt>, where the tuning strategy should be a diagonal line search if the Pytorch implementation is used.
 
-* In the appendix, we show that the results are similar when using a square-root decaying scheduler for $\eta_t$ instead.
+* In the appendix, we show that the results are similar when using a square-root decaying scheduler for \\(\eta_t\\) instead.
 
 * This blog post only covers a ridge regression problem, and one might argue that the results could be different for other tasks. However, the exercise certainly shows there is no decoupling for <tt>AdamW-PT</tt> for one of the simplest possible problems, ridge regression. I also observed good performance of the (S2) strategy for <tt>AdamW-PT</tt> when training a vision transfomer on Imagenet (with the `timm` [library](https://github.com/huggingface/pytorch-image-models)).
 
@@ -201,7 +201,7 @@ If you want to cite this post, please use
 
 ### Results with square-root schedule
 
-To validate that the effects are similar for non-constant learning rates, we run the same experiment but now with a square-root decaying learning rate schedule. That is $\eta_t = 1/\sqrt{\text{epoch of iteration } t}$. We sweep again over the initial learning rate $\alpha$ and weight decay parameter $\lambda$. The results are plotted below:
+To validate that the effects are similar for non-constant learning rates, we run the same experiment but now with a square-root decaying learning rate schedule. That is \\(\eta_t = 1/\sqrt{\text{epoch of iteration } t}\\). We sweep again over the initial learning rate \\(\alpha\\) and weight decay parameter \\(\lambda\\). The results are plotted below:
 
 ![](/images/decoupling/decoupling_heatmap_ridge_sqrt_II.png)
 *Fig. 4: Same as Figure 3, but with a square-root decaying learning-rate schedule.*
