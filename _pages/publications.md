@@ -5,6 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
+* The Surprising Agreement Between Convex Optimization Theory and Learning-Rate Scheduling for Large Model Training [[abs]](https://arxiv.org/abs/2501.18965) [[pdf]](https://arxiv.org/pdf/2501.18965), Schaipp F, Hägele A, Taylor A, Simsekli U, Bach F. Arxiv preprint 2025.
 * MoMo: Momentum Models for Adaptive Learning Rates [[abs]](https://arxiv.org/abs/2305.07583) [[pdf]](https://arxiv.org/pdf/2305.07583), Schaipp F, Ohana R, Eickenberg M, Defazio A, Gower R. **ICML 2024**.
 * A Semismooth Newton Stochastic Proximal Point Algorithm with Variance Reduction [[abs]](https://epubs.siam.org/doi/abs/10.1137/22M1488181)  [[pdf]](https://arxiv.org/pdf/2204.00406), Milzarek A, Schaipp F, Ulbrich M. **SIOPT 2024**.
 * SGD with Clipping is Secretly Estimating the Median Gradient [[abs]](https://arxiv.org/abs/2402.12828) [[pdf]](https://arxiv.org/pdf/2402.12828), Schaipp F, Garrigos G, Simsekli U, Gower R. Arxiv preprint 2024.
