@@ -10,6 +10,7 @@ redirect_from:
 {% include base_path %}
 
 
+* **lr-scheduling**: implementation of convex optimization bounds for LR schedules. Proposed as a testbed for schedule design, e.g. for continual learning. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/lr-scheduling)
 
 * **MoMo**: adaptive learning rates for momentum methods. Pytorch package: [![PyPI version fury.io](https://badge.fury.io/py/momo-opt.svg)](https://pypi.python.org/pypi/momo-opt/) [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/MoMo). Also available in [Optax](https://optax.readthedocs.io/en/latest/api/contrib.html#optax.contrib.momo).
 
