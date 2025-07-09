@@ -7,6 +7,8 @@ redirect_from:
   - /about.html
 ---
 
+<img src="/images/own/complex_3_cropped.png" width="800"/>
+
 About me
 -------------
 I am a researcher working on Optimization for Machine Learning. Since September 2024, I am a postdoc at Inria Paris, advised by Francis Bach, Umut Simsekli, and Adrien Taylor. Previously, I obtained my PhD at the Technical University of Munich (TUM), supervised by Professor Michael Ulbrich. [[Thesis]](https://mediatum.ub.tum.de/doc/1734714/1734714.pdf)
