@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 * The Surprising Agreement Between Convex Optimization Theory and Learning-Rate Scheduling for Large Model Training, Schaipp F, Hägele A, Taylor A, Simsekli U, Bach F. **ICML 2025**.
-[[abs]](https://arxiv.org/abs/2501.18965) [[pdf]](https://arxiv.org/pdf/2501.18965)
+[[abs]](https://arxiv.org/abs/2501.18965) [[pdf]](https://arxiv.org/pdf/2501.18965) [[poster]](/files/poster_lr_schedules.pdf)
 
 * MoMo: Momentum Models for Adaptive Learning Rates, Schaipp F, Ohana R, Eickenberg M, Defazio A, Gower R. **ICML 2024**. [[abs]](https://arxiv.org/abs/2305.07583) [[pdf]](https://arxiv.org/pdf/2305.07583) [[poster]](/files/poster_momo.pdf)
 
