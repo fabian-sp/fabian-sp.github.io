@@ -84,7 +84,7 @@ We will work with the following (approximate) definition: we say that \\(\alpha\
 
 The graphic below illustrates this phenomenon: imagine, we draw a heatmap of the validation loss over a \\((\alpha,\lambda)\\) grid. Bright values indicate a better model performance. Then, in a coupled scenario (**left**) the bright valley could have a diagonal shape, while for the decoupled scenario (**right**) the valley is more rectangular.
 
-![](/images/decoupling/heatmap.png)
+![](/images/blog/decoupling/heatmap.png)
 *Fig. 1: Model performance (bright = good) as a function of learning rate and weight decay parameters. Illustration taken from [2].*
 
 Note that in practice this can make a huge difference: in general, we need to tune over the 2D-space of \\((\alpha,\lambda)\\), assuming that all other hyperparameters are already set. The naive way to do this is a grid search.
@@ -115,7 +115,7 @@ We run both <tt>AdamW-LH</tt> and <tt>AdamW-PT</tt>, for a grid of learning-rate
 
 Below is the final validation-set loss, plotted as heatmap over \\(\alpha\\) and \\(\lambda\\). Again, brighter values indicate lower loss values.
 
-![](/images/decoupling/decoupling_heatmap_ridge_I.png)
+![](/images/blog/decoupling/decoupling_heatmap_ridge_I.png)
 *Fig. 2: Final validation loss (bright = low) as a function of learning rate \\(\alpha\\) and weight decay parameter \\(\lambda\\).*
 
 This matches the previous illustrative picture in Figure 1 pretty well (it's not a perfect rectangle for <tt>AdamW-LH</tt>, but I guess it proves the point)!
@@ -150,7 +150,7 @@ We plot again the heatmaps as before, but now highlighting the points that we wo
 Here, we set \\((\bar \lambda, \bar \alpha) =\\) `(1e-2,3.2e-1)` for <tt>AdamW-PT</tt>, and \\((\bar \lambda, \bar \alpha) =\\) `(1e-2,3.2e-3)` for <tt>AdamW-LH</tt>.
 In the below plots, the circle-shaped markers highlight the sweep that corresponds to the tuning strategy (S1) or (S2). The bottom plot shows the validation loss as a curve over the highlighted markers.
 
-![](/images/decoupling/decoupling_heatmap_ridge_II.png)
+![](/images/blog/decoupling/decoupling_heatmap_ridge_II.png)
 *Fig. 3: Three different tuning strategies: (S1) for <tt>AdamW-PT</tt> (left), (S2) for <tt>AdamW-PT</tt> (middle) and (S1) for <tt>AdamW-LH</tt> (right). **Top**: Heatmap of final validation loss  where the highlighted points show the results of the respective sweep. **Bottom:** A curve of the final validation loss at each of the highlighted points (learning rate increases from left to right on x-axis).*
 
 
@@ -183,7 +183,7 @@ If you want to cite this post, please use
 ```
 
 
-<img src="/images/own/hodler2.jpg" width="800"/>
+<img src="/images/blog/own/hodler2.jpg" width="800"/>
 
 
 
@@ -203,7 +203,7 @@ If you want to cite this post, please use
 
 To validate that the effects are similar for non-constant learning rates, we run the same experiment but now with a square-root decaying learning rate schedule. That is \\(\eta_t = 1/\sqrt{\text{epoch of iteration } t}\\). We sweep again over the initial learning rate \\(\alpha\\) and weight decay parameter \\(\lambda\\). The results are plotted below:
 
-![](/images/decoupling/decoupling_heatmap_ridge_sqrt_II.png)
+![](/images/blog/decoupling/decoupling_heatmap_ridge_sqrt_II.png)
 *Fig. 4: Same as Figure 3, but with a square-root decaying learning-rate schedule.*
 
 
