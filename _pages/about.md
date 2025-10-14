@@ -16,9 +16,9 @@ I am a researcher working on Optimization for Machine Learning. Since September 
 
 **Research Overview.** I am interested in stochastic optimization algorithms for machine learning, and related topics in computation and statistics. One common theme of my past work is trying to understand and simplify training recipes for ML models. For example:
 
-* Understanding the behaviour of learning-rate schedules for LLM training ([link to paper](https://arxiv.org/pdf/2501.18965))
-* Developing adaptive learning-rate methods based on the Polyak step size ([**MoMo**](https://arxiv.org/abs/2305.07583), [**ProxSPS**](https://openreview.net/forum?id=jWr41htaB3))
-* Bridging optimization theory and practice of LLM training (for example through scaling laws)
+* Understanding the behaviour of learning-rate schedules for LLM training [[ICML 2025]](https://arxiv.org/pdf/2501.18965)
+* Developing adaptive learning-rate methods based on the Polyak step size ([**MoMo** [ICML 2024]](https://arxiv.org/abs/2305.07583) and [**ProxSPS** [TMLR 2023]](https://openreview.net/forum?id=jWr41htaB3))
+* Bridging optimization theory and practice of LLM training
 
 Contact
 -------------
