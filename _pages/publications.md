@@ -5,14 +5,16 @@ permalink: /publications/
 author_profile: true
 ---
 
+* Optimization Benchmark for Diffusion Models on Dynamical Systems, Schaipp F. Arxiv preprint, 2025. [[abs]](https://arxiv.org/abs/2510.19376) [[pdf]](https://arxiv.org/pdf/2510.19376)
+
 * The Surprising Agreement Between Convex Optimization Theory and Learning-Rate Scheduling for Large Model Training, Schaipp F, Hägele A, Taylor A, Simsekli U, Bach F. **ICML 2025**.
 [[abs]](https://arxiv.org/abs/2501.18965) [[pdf]](https://arxiv.org/pdf/2501.18965) [[poster]](/files/poster_lr_schedules.pdf)
+
+* Tracking the Median of Gradients with a Stochastic Proximal Point Method, Schaipp F, Garrigos G, Simsekli U, Gower R. **TMLR 2025**, Expert Certification. [[abs]](https://openreview.net/forum?id=WMxLEgYGxu) [[pdf]](https://openreview.net/pdf?id=WMxLEgYGxu)
 
 * MoMo: Momentum Models for Adaptive Learning Rates, Schaipp F, Ohana R, Eickenberg M, Defazio A, Gower R. **ICML 2024**. [[abs]](https://arxiv.org/abs/2305.07583) [[pdf]](https://arxiv.org/pdf/2305.07583) [[poster]](/files/poster_momo.pdf)
 
 * A Semismooth Newton Stochastic Proximal Point Algorithm with Variance Reduction, Milzarek A, Schaipp F, Ulbrich M. **SIOPT 2024**. [[abs]](https://epubs.siam.org/doi/abs/10.1137/22M1488181)  [[pdf]](https://arxiv.org/pdf/2204.00406)
-
-* SGD with Clipping is Secretly Estimating the Median Gradient, Schaipp F, Garrigos G, Simsekli U, Gower R. Arxiv preprint 2024. [[abs]](https://arxiv.org/abs/2402.12828) [[pdf]](https://arxiv.org/pdf/2402.12828)
 
 * Robust gradient estimation in the presence of heavy-tailed noise , Schaipp F, Simsekli U, Gower R. **NeurIPS Workshop Heavy Tails in Machine Learning 2023**.[[abs]](https://openreview.net/forum?id=C6PiH9Fkjd) [[pdf]](https://openreview.net/pdf?id=C6PiH9Fkjd)
 
