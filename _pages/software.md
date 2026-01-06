@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-* **Diffusion Training**: Optimization benchmark (AdamW, Muon, SOAP, Prodigy, ...) for training diffusion models on dynamical systems (for score-based data assimilation). [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/sda)
+* **Diffusion training benchmark**: Optimization benchmark (AdamW, Muon, SOAP, Prodigy, ...) for training diffusion models on dynamical systems for score-based data assimilation. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/sda)
 
 * **lr-scheduling**: implementation of convex optimization bounds for LR schedules. Proposed as a testbed for schedule design, e.g. for continual learning. [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/fabian-sp/lr-scheduling)
 

@@ -11,14 +11,16 @@ redirect_from:
 
 About me
 -------------
-I am a researcher working on Optimization for Machine Learning. Since September 2024, I am a postdoc at Inria Paris, advised by Francis Bach, Umut Simsekli, and Adrien Taylor. Previously, I obtained my PhD at the Technical University of Munich (TUM), supervised by Professor Michael Ulbrich. [[Thesis]](https://mediatum.ub.tum.de/doc/1734714/1734714.pdf)
+I am a researcher working on Optimization for Machine Learning. Since September 2024, I am a postdoc at Inria Paris, advised by Francis Bach, Umut Simsekli, and Adrien Taylor. Previously, I obtained my PhD at the Technical University of Munich (TUM), supervised by Professor Michael Ulbrich.
 
 
-**Research Overview.** I am interested in stochastic optimization algorithms for machine learning, and related topics in computation and statistics. One common theme of my past work is trying to understand and simplify training recipes for ML models. For example:
+**Research Overview.** A common theme of my past work is to understand, simplify, and ultimately improve training recipes for ML models. As a result, my research is often trying to bridge optimization theory and machine learning practice.
 
-* Understanding the behaviour of learning-rate schedules for LLM training [[ICML 2025]](https://arxiv.org/pdf/2501.18965)
-* Developing adaptive learning-rate methods based on the Polyak step size ([**MoMo** [ICML 2024]](https://arxiv.org/abs/2305.07583) and [**ProxSPS** [TMLR 2023]](https://openreview.net/forum?id=jWr41htaB3))
-* Bridging optimization theory and practice of LLM training
+Selection of recent works:
+
+*  Understanding the behaviour of learning-rate schedules for LLM training [[ICML 2025]](https://arxiv.org/pdf/2501.18965)
+* What are good optimizers for training diffusion models? [[EurIPS 2025]](https://arxiv.org/pdf/2510.19376) 
+* Developing training algorithms that need less tuning ([**MoMo** [ICML 2024]](https://arxiv.org/abs/2305.07583) and a proximal Polyak step size [[TMLR 2023]](https://openreview.net/forum?id=jWr41htaB3))
 
 Contact
 -------------
@@ -28,6 +30,7 @@ You can write me at firsstname[dot]lastname[at]tum[dot]de.
 News
 ----------
 
+* [December 2025] I will be at EurIPS in Copenhagen.
 * [July 2025] I will be at ICML in Vancouver.
 * [September 2024] Moved to Paris.
 * [July 2024] I successfully defended my PhD thesis!
