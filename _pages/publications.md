@@ -7,6 +7,13 @@ author_profile: true
 
 Below is a list of highlighted publications. A full list can be found on [Google Scholar](https://scholar.google.com/citations?hl=en&user=Wxb5J_8AAAAJ).
 
+* How to Allocate Your Tokens? Scaling Laws with Training Steps and Batch Size, Schaipp F. *preprint*, 2026.
+[[abs]](https://arxiv.org/abs/2607.01487) [[pdf]](https://arxiv.org/pdf/2607.01487)
+
+* Step-Size Stability in Stochastic Optimization: A Theoretical Perspective, Schaipp F, Gower R, Taylor A. **ICML 2026**.
+[[abs]](https://arxiv.org/abs/2602.09842) [[pdf]](https://arxiv.org/pdf/2602.09842) [[poster]](/files/poster_step_size_stability.pdf)
+
+
 * Optimization Benchmark for Diffusion Models on Dynamical Systems, Schaipp F. **EurIPS 2025**. [[abs]](https://arxiv.org/abs/2510.19376) [[pdf]](https://arxiv.org/pdf/2510.19376) [[poster]](/files/poster_diffusion.pdf)
 
 * The Surprising Agreement Between Convex Optimization Theory and Learning-Rate Scheduling for Large Model Training, Schaipp F, Hägele A, Taylor A, Simsekli U, Bach F. **ICML 2025**.

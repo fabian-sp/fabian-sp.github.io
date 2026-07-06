@@ -30,6 +30,7 @@ You can write me at firsstname[dot]lastname[at]tum[dot]de.
 News
 ----------
 
+* [July 2026] I will be at ICML in Seoul.
 * [December 2025] I will be at EurIPS in Copenhagen.
 * [July 2025] I will be at ICML in Vancouver.
 * [September 2024] Moved to Paris.
