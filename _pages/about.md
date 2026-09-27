@@ -11,29 +11,22 @@ redirect_from:
 
 About me
 -------------
-I am a researcher working on Optimization for Machine Learning. Since September 2024, I am a postdoc at Inria Paris, advised by Francis Bach, Umut Simsekli, and Adrien Taylor. Previously, I obtained my PhD at the Technical University of Munich (TUM), supervised by Professor Michael Ulbrich.
+I am a researcher working on optimization for machine learning. Currently, I am a member of technical staff in pretraining at Cohere.
 
 
-**Research Overview.** A common theme of my past work is to understand, simplify, and ultimately improve training recipes for ML models. As a result, my research is often trying to bridge optimization theory and machine learning practice.
+**Previous positions:**
+* Postdoc at Inria Paris (advisors: Francis Bach, Umut Simsekli, and Adrien Taylor).
+*  PhD at Technical University of Munich (advisor: Michael Ulbrich).
 
-Selection of recent works:
 
-*  Understanding the behaviour of learning-rate schedules for LLM training [[ICML 2025]](https://arxiv.org/pdf/2501.18965)
+**Research Overview.** A common theme of my past work is to understand, simplify, and ultimately improve training recipes for ML models. Selection of past work:
+
+* Understanding the behaviour of learning-rate schedules for LLM training [[ICML 2025]](https://arxiv.org/pdf/2501.18965)
 * What are good optimizers for training diffusion models? [[EurIPS 2025]](https://arxiv.org/pdf/2510.19376) 
-* Developing training algorithms that need less tuning ([**MoMo** [ICML 2024]](https://arxiv.org/abs/2305.07583) and a proximal Polyak step size [[TMLR 2023]](https://openreview.net/forum?id=jWr41htaB3))
+* Training algorithms that need less tuning ([**MoMo** [ICML 2024]](https://arxiv.org/abs/2305.07583), proximal Polyak step size [[TMLR 2023]](https://openreview.net/forum?id=jWr41htaB3))
 
 Contact
 -------------
 
-You can write me at firsstname[dot]lastname[at]tum[dot]de.
+You can write me at `firsstname[dot]lastname[at]tum[dot]de` or find me on Strava.
 
-News
-----------
-
-* [July 2026] I will be at ICML in Seoul.
-* [December 2025] I will be at EurIPS in Copenhagen.
-* [July 2025] I will be at ICML in Vancouver.
-* [September 2024] Moved to Paris.
-* [July 2024] I successfully defended my PhD thesis!
-* [August 2023] Visiting researcher at CCM, Flatiron Institute, New York City.
-* [August 2022] Visiting researcher at CCM, Flatiron Institute, New York City.
