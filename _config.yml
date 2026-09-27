@@ -24,7 +24,7 @@ author:
   avatar           : "own/profile_pic.jpg"
   name             : "Fabian Schaipp"  # sidebar name
   pronouns         : # example: "she/her"  
-  bio              : "Postdoc at Inria Paris"
+  bio              : "Training LLMs at Cohere"
   location         : "Paris"
   employer         : 
   uri              : # URL
